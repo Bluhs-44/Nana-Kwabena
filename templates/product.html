@@ -1,0 +1,8 @@
+<!doctype html>
+<title>{{ product.name }}</title>
+<h1>{{ product.name }}</h1>
+<p>Price: ${{ '%.2f' % product.price }}</p>
+<form action="{{ url_for('add_to_cart', pid=product.id) }}" method="post">
+  <button type="submit">Add to Cart</button>
+</form>
+<a href="{{ url_for('index') }}">Back to Products</a>
